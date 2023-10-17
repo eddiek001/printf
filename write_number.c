@@ -3,7 +3,7 @@
 /**
  * write_number - print a string
  * @is_negative:  list of arguments
- * @ind: character arg
+ * @index: character arg
  * @buffer: buffer array
  * @flags: calc active flags
  * @width: calc width
@@ -40,24 +40,23 @@ int write_number(int is_negative, int index, char buffer[], int flags,
  * @flags: flags specifier
  * @width: calc width
  * @length: calc length
- * @precision: precision specifier
+ * @pr: precision specifier
  * @padd: padding character
  * @extra_c: extra char
  * Return: NUmber of printed chars
  */
 int write_num(int index, char buffer[], int flags, int width,
-	int precision, int length, char padd, char extra_c)
+	int pr, int length, char padd, char extra_c)
 {
 	int i, padd_start = 1;
 
-	if (precision == 0 && index == BUFF_SIZE - 2
-			&& buffer[index] == '0' && width == 0)
-		return (0);/* printf*/
-	if (precision == 0 && index == BUFF_SIZE - 2 && buffer[index] == '0')
+	if (pr == 0 && index == BUFF_SIZE - 2 && buffer[index] == '0' && width == 0)
+		return (0);
+	if (pr == 0 && index == BUFF_SIZE - 2 && buffer[index] == '0')
 		buffer[index] = padd = ' ';
-	if (precision > 0 && precision < length)
+	if (pr > 0 && pr < length)
 		padd = ' ';
-	while (precision > length)
+	while (pr > length)
 		buffer[--index] = '0', length++;
 	if (extra_c != 0)
 		length++;
@@ -68,14 +67,14 @@ int write_num(int index, char buffer[], int flags, int width,
 		buffer[i] = '\0';
 		if (flags & F_MINUS && padd == ' ')
 		{
-			if (extra_c)  /* asign extra char */
+			if (extra_c)
 				buffer[--index] = extra_c;
 			return (write(1, &buffer[index], length) + write(1, &buffer[1], i - 1));
 		}
 		else if (!(flags & F_MINUS) && padd == ' ')
 		{
 			if (extra_c)
-				buffer[--index] = extra_c;/* extra char to left*/
+				buffer[--index] = extra_c;
 			return (write(1, &buffer[1], i - 1) + write(1, &buffer[index], length));
 		}
 		else if (!(flags & F_MINUS) && padd == '0')
