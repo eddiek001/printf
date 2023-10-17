@@ -91,7 +91,7 @@ int write_pointer(char buffer[], int index, int length,
 		int width, int flags, char padd, char extra_c, int padd_start);
 int write_num(int index, char buffer[], int flags, int width,
 		int precision, int length, char padd, char extra_c);
-int write_number(int is_negative, int ind, char buffer[], int flags,
+int write_number(int is_positive, int index, char buffer[], int flags,
 		int width, int precision, int size);
 
 #endif

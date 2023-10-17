@@ -15,7 +15,7 @@ int print_int(va_list arg, char buffer[],
 	 int width, int precision, int size, int flags)
 {
 	int i = BUFF_SIZE - 2;
-	int is_neg = 0;
+	int is_negative = 0;
 	unsigned long int num;
 	long int n = va_arg(arg, long int);
 
@@ -27,7 +27,7 @@ int print_int(va_list arg, char buffer[],
 	if (n < 0)
 	{
 		num = (unsigned long int)((-1) * n);
-		is_neg = 1;
+		is_negative = 1;
 	}
 	while (num > 0)
 	{
@@ -35,5 +35,5 @@ int print_int(va_list arg, char buffer[],
 		num = num / 10;
 	}
 	i++;
-	return (write_number(is_neg, i, buffer, size, width, precision, flags));
+	return (write_number(is_negative, i, buffer, size, width, precision, flags));
 }
