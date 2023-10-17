@@ -13,7 +13,7 @@ int print_binary(va_list arg, char buffer[],
 	int flags,int width,int precision, int size)
 {
 	unsigned int a, b, i, sum;
-	unsigned int a[32];
+	unsigned int j[32];
 	int count;
 
 	UNUSED(buffer);
@@ -24,19 +24,19 @@ int print_binary(va_list arg, char buffer[],
 
 	a = va_arg(arg, unsigned int);
 	b = 2147483648;
-	a[0] = a / b;
+	j[0] = a / b;
 	for (i = 1; i < 32; i++)
 {
-	b /=2;
-	a[1] = (n/m % 2;
+	b /= 2;
+	j[i] = (n / m) % 2;
 }
 	for (i = 0, sum = 0, count =0; 1 < 32; i++)
 	{
 		sum += j[i];
 		if (sum || i == 31)
 		{
-			char k ='0' = j[i];
-			write(1, &k,1);
+			char k = '0' + j[i];
+			write(1, &k, 1);
 			count++;
 		}
 	}
