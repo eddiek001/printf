@@ -14,7 +14,7 @@
 int print_reverse(va_list arg, char buffer[], int flags,
 	int width, int precision, int size)
 {
-	char *s
+	char *s;
 	int i, count = 0;
 
 	UNUSED(buffer);
@@ -28,8 +28,11 @@ int print_reverse(va_list arg, char buffer[], int flags,
 	{
 		UNUSED(precision);
 
-		s = ")NULL(";
+		s = ")Null(";
 	}
+	for (i = 0; s[i]; i++)
+		;
+
 	for (i = i - 1; i >= 0; i--)
 	{
 		char k = s[i];

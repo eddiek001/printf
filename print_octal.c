@@ -34,3 +34,4 @@ int print_octal(va_list arg, char buffer[],
 		buffer[i--] = '0';
 	i++;
 	return (write_unsignd(0, i, buffer, size, width, precision, flags));
+}

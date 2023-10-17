@@ -62,7 +62,7 @@ int print_hex_upper(va_list arg, char buffer[],
 int print_hex(va_list arg, char map_to[], char buffer[],
 		int flag_ch, int width, int size, int flags, int precision);
 
-int print_non_printable(va_arg arg, char buffer[], int flags,
+int print_non_printable(va_list arg, char buffer[], int flags,
 		int width, int precision, int size);
 int print_pointer(va_list arg, char buffer[],
 		int flags, int width, int precision, int size);
@@ -74,7 +74,7 @@ int get_width(const char *format, int *i, va_list arg);
 
 int print_reverse(va_list arg, char buffer[], int flags,
 		int width, int precision, int size);
-int print_rot13(va_arg arg, char buffer[], int flags,
+int print_rot13(va_list arg, char buffer[], int flags,
 		int width, int precision, int size);
 
 int is_printable(char c);
@@ -91,7 +91,7 @@ int write_pointer(char buffer[], int index, int length,
 		int width, int flags, char padd, char extra_c, int padd_start);
 int write_num(int index, char buffer[], int flags, int width,
 		int precision, int length, char padd, char extra_c);
-int write_num(int is_negative, int ind, char buffer[], int flags,
+int write_number(int is_negative, int ind, char buffer[], int flags,
 		int width, int precision, int size);
 
 #endif

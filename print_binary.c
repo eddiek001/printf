@@ -19,7 +19,7 @@ int print_binary(va_list arg, char buffer[],
 	UNUSED(buffer);
 	UNUSED(flags);
 	UNUSED(width);
-	UNUSED(Precision);
+	UNUSED(precision);
 	UNUSED(size);
 
 	a = va_arg(arg, unsigned int);

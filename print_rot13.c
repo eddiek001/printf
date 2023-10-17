@@ -42,11 +42,11 @@ int print_rot13(va_list arg, char buffer[], int flags,
 				break;
 			}
 		}
-		if (!in[k];
+		if (!in[k])
 		{
 			x = s[i];
 			write(1, &x, 1);
-			count++
+			count++;
 		}
 	}
 	return (count);

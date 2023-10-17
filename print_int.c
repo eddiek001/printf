@@ -35,5 +35,5 @@ int print_int(va_list arg, char buffer[],
 		num = num / 10;
 	}
 	i++;
-	return (write_num(is_neg, i, buffer, size, width, precision, flags));
+	return (write_number(is_neg, i, buffer, size, width, precision, flags));
 }

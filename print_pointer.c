@@ -21,7 +21,7 @@ int print_pointer(va_list arg, char buffer[],
 	void *address = va_arg(arg, void *);
 
 	UNUSED(width);
-	UNUSED(Size);
+	UNUSED(size);
 
 	if (address == NULL)
 		return (write(1, "(nil)", 5));
@@ -31,9 +31,9 @@ int print_pointer(va_list arg, char buffer[],
 
 	num_address = (unsigned long)address;
 
-	while (num_address > o)
+	while (num_address > 0)
 	{
-		buffer[index--] - map_to[n_address % 16];
+		buffer[index--] =  map_to[num_address % 16];
 		num_address /= 16;
 		length++;
 	}

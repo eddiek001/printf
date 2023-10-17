@@ -25,10 +25,10 @@ int print_non_printable(va_list arg, char buffer[], int flags,
 		return (write(1, "(null)", 6));
 	while (s[i] != '\0')
 	{
-		if (its_printable(s[i]))
+		if (is_printable(s[i]))
 			buffer[i + set] = s[i];
 		else
-		set += append_hexa_code(s[i], buffer, i + set);
+		set += append_hex(s[i], buffer, i + set);
 
 		i++;
 

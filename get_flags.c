@@ -10,12 +10,12 @@
 
 int get_flags(const char *format, int *i)
 {
-	int j, current_i;
+	int j, curr_i;
 	int flags = 0;
 	const char FLAGS_CH[] = {'+', '-', '#', '0', ' ', '\0'};
 	const int FLAGS_ARR[] = {F_PLUS, F_MINUS, F_HASH, F_ZERO, F_SPACE, 0};
 
-	for (current_i = *i + 1; format[current_i] != '\0'; current_i++)
+	for (curr_i = *i + 1; format[curr_i] != '\0'; curr_i++)
 	{
 		for (j = 0; FLAGS_CH[j] != '\0'; j++)
 			if (format[curr_i] == FLAGS_CH[j])
@@ -28,7 +28,7 @@ int get_flags(const char *format, int *i)
 			break;
 	}
 
-	*i = current_i - 1;
+	*i = curr_i - 1;
 
 	return (flags);
 }
