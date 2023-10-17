@@ -13,8 +13,8 @@
 int print_non_printable(va_arg arg, char buffer[], int flags,
 	int width, int precision, int size)
 {
-	int i= 0, set = 0;
-	char *s = va_arg(arg , char *);
+	int i = 0, set = 0;
+	char *s = va_arg(arg, char *);
 
 	UNUSED(width);
 	UNUSED(size);

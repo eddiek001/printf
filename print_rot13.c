@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-*print_rot13string - print a rot13 string
+*print_rot13 - print a rot13 string
 *@buffer: buffer array
 *@arg: list of arguments
 *@flags: calc active flags
@@ -11,7 +11,7 @@
 *
 */
 
-int print_rot13string(va_arg arg, char buffet[, int flags,
+int print_rot13(va_arg arg, char buffer[], int flags,
 	int width, int precision, int size)
 {
 	char x;

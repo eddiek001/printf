@@ -10,7 +10,7 @@
 *Return: Number of char
 */
 int print_char(va_list arg, char buffer[],
-	int flags,int width,int size, int precision)
+	int flags, int width, int size, int precision)
 {
 	char c = va_arg(arg, int);
 

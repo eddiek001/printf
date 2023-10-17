@@ -14,9 +14,9 @@
 int print_pointer(va_list arg, char buffer[],
 	int flags, int width, int precision, int size)
 {
-	char extra_c = 0, padd =' ';
-	int index = BUFF_SIZE -2 , length = 2, padd_start = 1;
-	unsigned long n_address;
+	char extra_c = 0, padd = ' ';
+	int index = BUFF_SIZE - 2, length = 2, padd_start = 1;
+	unsigned long num_address;
 	char map_to[] = "0123456789abcdef";
 	void *address = va_arg(arg, void *);
 
@@ -25,16 +25,16 @@ int print_pointer(va_list arg, char buffer[],
 
 	if (address == NULL)
 		return (write(1, "(nil)", 5));
-	buffer[BUFF_SIZE -1] = '\0';
+	buffer[BUFF_SIZE - 1] = '\0';
 
 	UNUSED(precision);
 
-	n_address = (unsigned long)address;
+	num_address = (unsigned long)address;
 
-	while(n_address > o)
+	while (num_address > o)
 	{
-		buffer[index--] - mmap_to[n_address % 16];
-		n_address /= 16;
+		buffer[index--] - map_to[n_address % 16];
+		num_address /= 16;
 		length++;
 	}
 	if ((flags & F_ZERO) && !(flags & F_MINUS))

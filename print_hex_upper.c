@@ -12,8 +12,8 @@
 */
 
 int print_hex_upper(va_list arg, char buffer[],
-        int width, int flags, int size, int precision)
+		int width, int flags, int size, int precision)
 {
-        return (print_hex(arg, "0123456789ABCDEF",
-                buffer, width, flags, 'X', size, precision));
+	return (print_hex(arg, "0123456789ABCDEF",
+				buffer, width, flags, 'X', size, precision));
 }

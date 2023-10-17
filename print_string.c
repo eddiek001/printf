@@ -9,7 +9,7 @@
 *@size: size spcifier
 *Return: Number of char printed
 */
-int print_string(va_list arg,char buffer[],
+int print_string(va_list arg, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	int i, length = 0;
@@ -25,11 +25,11 @@ int print_string(va_list arg,char buffer[],
 	{
 		s = "(null)";
 		if (precision >= 6)
-			s ="      ";
+			s = "      ";
 	}
 	while (s[length] != '\0')
 		length++;
-	if(precision >=0 && precision < length)
+	if (precision >= 0 && precision < length)
 		length = precision;
 	if (width > length)
 	{
@@ -37,13 +37,13 @@ int print_string(va_list arg,char buffer[],
 		{
 			write(1, &s[0], length);
 			for (i = width - length; i > 0; i--)
-				write(1," ",1);
-			return(width);
+				write(1, " ", 1);
+			return (width);
 		}
 		else
 		{
-			for (i = width - length; i > 0;i--)
-			write(1, " ",1);
+			for (i = width - length; i > 0; i--)
+			write(1, " ", 1);
 			write(1, &s[0], length);
 			return (width);
 		}

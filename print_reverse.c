@@ -11,11 +11,11 @@
 *
 */
 
-int print_reverse(va_list arg,char buffer[], int flags,
+int print_reverse(va_list arg, char buffer[], int flags,
 	int width, int precision, int size)
 {
 	char *s
-	int i, count =0;
+	int i, count = 0;
 
 	UNUSED(buffer);
 	UNUSED(flags);
