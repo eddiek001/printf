@@ -31,9 +31,10 @@ int print_non_printable(va_arg arg, char buffer[], int flags,
 		set += append_hexa_code(s[i], buffer, i + set);
 
 		i++;
+
 	}
 
 	buffer[i + set] = '\0';
 
 		return (write(1, biffer, i + set));
-}	
+}
