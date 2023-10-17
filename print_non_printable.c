@@ -10,7 +10,7 @@
 *Return: Number of char printed
 */
 
-int print_non_printable(va_arg arg, char buffer[], int flags,
+int print_non_printable(va_list arg, char buffer[], int flags,
 	int width, int precision, int size)
 {
 	int i = 0, set = 0;

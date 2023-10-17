@@ -11,7 +11,7 @@
 *
 */
 
-int print_rot13(va_arg arg, char buffer[], int flags,
+int print_rot13(va_list arg, char buffer[], int flags,
 	int width, int precision, int size)
 {
 	char x;
