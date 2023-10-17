@@ -82,4 +82,16 @@ int append_hex(char ascii_code, char buffer[], int i);
 int is_digit(char c);
 long int convert_size_num(long int num, int size);
 long int convert_size_unsignd(unsigned long int num, int size);
+
+int handle_write_char(char c, char buffer[], int flags,
+		int width, int precision, int size);
+int write_unsignd(int is_negative, int index, char buffer[],
+		int flags, int width, int precision, int size);
+int write_pointer(char buffer[], int index, int length,
+		int width, int flags, char padd, char extra_c, int padd_start);
+int write_num(int index, char buffer[], int flags, int width,
+		int precision, int length, char padd, char extra_c);
+int write_num(int is_negative, int ind, char buffer[], int flags,
+		int width, int precision, int size);
+
 #endif
