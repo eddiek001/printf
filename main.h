@@ -44,7 +44,7 @@ int print_char(va_list arg, char buffer[],
 		int flags, int width, int size, int precision);
 int print_string(va_list arg, char buffer[],
 		int flags, int width, int precision, int size);
-int print_percentage(va_list arg, char buffer[],
+int print_percent(va_list arg, char buffer[],
 		int width, int size, int precision, int flags);
 
 int print_int(va_list arg, char buffer[],

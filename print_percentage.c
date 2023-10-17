@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* print_percentage - prints percentage
+* print_percent - prints percentage
 * @arg: argument list
 * @buffer: stores array
 * @width: size of width
@@ -11,7 +11,7 @@
 * Return: percentage sign
 */
 
-int print_percentage(va_list arg, char buffer[],
+int print_percent(va_list arg, char buffer[],
 	 int width, int size, int precision, int flags)
 {
 	UNUSED(buffer);
