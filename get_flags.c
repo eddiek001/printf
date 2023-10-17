@@ -1,5 +1,6 @@
 #include "main.h"
 
+
 /**
  * get_flags - calculates active flags
  * @format: formatted string
