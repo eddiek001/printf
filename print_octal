@@ -27,8 +27,8 @@ int print_octal(va_list arg, char buffer[],
 
         while (n > 0)
         {
-                buffer[i--] = (num % 8) + '0';
-                num = num / 8;
+                buffer[i--] = (n % 8) + '0';
+                n = n / 8;
         }
 
 	if (flags & F_HASH && init_n != 0)
