@@ -36,5 +36,5 @@ int print_non_printable(va_arg arg, char buffer[], int flags,
 
 	buffer[i + set] = '\0';
 
-		return (write(1, biffer, i + set));
+		return (write(1, buffer, i + set));
 }
