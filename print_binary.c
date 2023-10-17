@@ -10,7 +10,7 @@
 *Return: Number of charsc printed
 */
 int print_binary(va_list arg, char buffer[],
-	int flags,int width,int precision, int size)
+	int flags, int width, int precision, int size)
 {
 	unsigned int a, b, i, sum;
 	unsigned int j[32];
@@ -28,14 +28,15 @@ int print_binary(va_list arg, char buffer[],
 	for (i = 1; i < 32; i++)
 {
 	b /= 2;
-	j[i] = (n / m) % 2;
+	j[i] = (a / b) % 2;
 }
-	for (i = 0, sum = 0, count =0; 1 < 32; i++)
+	for (i = 0, sum = 0, count = 0; 1 < 32; i++)
 	{
 		sum += j[i];
 		if (sum || i == 31)
 		{
 			char k = '0' + j[i];
+
 			write(1, &k, 1);
 			count++;
 		}

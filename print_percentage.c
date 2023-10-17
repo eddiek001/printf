@@ -1,4 +1,3 @@
-
 #include "main.h"
 
 /**
@@ -13,7 +12,7 @@
 */
 
 int print_percentage(va_list arg, char buffer[],
-	 int width,int size, int precision, int flags)
+	 int width, int size, int precision, int flags)
 {
 	UNUSED(buffer);
 	UNUSED(width);
@@ -21,5 +20,5 @@ int print_percentage(va_list arg, char buffer[],
 	UNUSED(precision);
 	UNUSED(flags);
 
-	return (write(1, "%%", 1);
+	return (write(1, "%%", 1));
 }
